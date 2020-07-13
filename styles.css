@@ -569,7 +569,7 @@ a {
 .inner-card img {
   border-radius: 1.5em;
   width: 100%;
-  margin-top: 1em;
+  margin-top: 0.7em;
   margin-bottom: 1em;
 }
 
@@ -607,3 +607,12 @@ a {
   border-radius: 3em;
 }
 
+
+.icon {
+  width: 70%; padding-top: 1rem; align-self: center; vertical-align: center;
+}
+
+.icon:hover {
+  width: 70%; padding-top: 1rem; align-self: center; vertical-align: center;
+  filter: brightness(0) saturate(100%) invert(30%) sepia(40%) saturate(1670%) hue-rotate(238deg) brightness(89%) contrast(74%);
+}
