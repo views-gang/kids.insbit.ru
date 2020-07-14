@@ -693,14 +693,14 @@ h4 {
 
 .gradient {
   height: 12em;
-  padding-top: 7em; width: 120%;
+  padding-top: 7em; width: 100%;
    background: rgb(242,105,34);
 background: linear-gradient(180deg, rgba(242,105,34,1) 0%, rgba(117,76,158,1) 100%); 
 }
 
 .gradient-back {
   height: 12em;
-   width: 120%;
+   width: 100%;
    background: rgb(117,76,158,1);
 background: linear-gradient(0deg, rgba(242,105,34,1) 0%, rgba(117,76,158,1) 100%); 
 }
