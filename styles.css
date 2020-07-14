@@ -495,7 +495,7 @@ h1, h2 {
 
 h3 {
   color: #754C9E;
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: 500;
   padding-bottom: 0.33em;
 }
@@ -581,7 +581,7 @@ a {
 }
 
 .card-link {
-  font-size: 1.2em;
+  font-size: 1.3em;
   padding-bottom: 0.5em;
   line-height: 1.5em;
   font-weight: 300;
@@ -600,13 +600,71 @@ a {
 }
 
 .form {
-  height: 30em;
-  
+  position: relative;
   background-color: #754C9E;
   color: white;
   border-radius: 3em;
 }
 
+.form-inner {
+  width: 90%;
+  align-self: center;
+}
+
+input {
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  appearance: none;
+  -webkit-appearance: none;
+  height: 4em;
+  /*color: #F26922;*/
+}
+
+button, input {
+  width: 100%;
+  border: 0;
+  margin: 1em 0;
+  outline: 0;
+  padding: 0 1em;
+  font-size: 2.2em;
+  border-radius: 3em;
+  background-color: white;
+}
+
+button {
+  background-color: #F26922;
+  color: white;
+  font-weight: 500;
+  font-size: 3.5em;
+  padding-top: 0.6em;
+  padding-bottom: 0.5em;
+}
+
+label {
+  font-size: 2.7em;
+}
+
+h4 {
+  color: #F26922;
+  font-size: 5em;
+  font-weight: 700;
+  padding-top: 0.8em;
+  padding-bottom: 0.6em;
+}
+
+.politics {
+  font-size: 2em;
+  padding-bottom: 1.5em;
+}
+.politics a {
+  text-decoration: underline;
+}
+
+.contacts p a {
+  color: black;
+  text-decoration: underline;
+}
 
 .icon {
   width: 70%; padding-top: 1rem; align-self: center; vertical-align: center;
