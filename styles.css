@@ -441,7 +441,7 @@ body {
 
 
 
-@media screen and (orientation: landscape) {
+@media screen and (min-width: 992px) {
   .row {
     display: grid;
     width: 90%;  
@@ -457,7 +457,9 @@ body {
 }
 
 
-@media screen and (orientation: portrait) {
+
+
+@media screen and (max-width: 991.98px)  {
   .row {
     display: grid;
     padding-top: 2em;
