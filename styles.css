@@ -411,7 +411,7 @@ body {
 }
 
 .container {
-  width: 90%;  
+  width: 100%;  
   margin: 0 auto;
 }
 
@@ -444,7 +444,9 @@ body {
 @media screen and (orientation: landscape) {
   .row {
     display: grid;
+    width: 90%;  
     padding-top: 4em;
+    margin: 0 auto;
     grid-template-columns: repeat(12, 1fr);
   }
 
@@ -459,6 +461,8 @@ body {
   .row {
     display: grid;
     padding-top: 2em;
+    width: 95%;  
+    margin: 0 auto;
     grid-template-columns: repeat(6, 1fr);
   }
   .logo {
@@ -468,6 +472,9 @@ body {
   html {
         font-size: 24px;
     }
+
+  .map {visibility: hidden;}
+  .likely {visibility: hidden;}
 
 .wide-4 {grid-column: span 6 !important;}
 .col-1 {grid-column: span 1;}
@@ -607,7 +614,7 @@ a {
 }
 
 .form-inner {
-  width: 90%;
+  width: 95%;
   align-self: center;
 }
 
@@ -636,7 +643,7 @@ button {
   background-color: #F26922;
   color: white;
   font-weight: 500;
-  font-size: 3.5em;
+  font-size: 3.3em;
   padding-top: 0.6em;
   padding-bottom: 0.5em;
 }
@@ -672,5 +679,50 @@ h4 {
 
 .icon:hover {
   width: 70%; padding-top: 1rem; align-self: center; vertical-align: center;
-  filter: brightness(0) saturate(100%) invert(30%) sepia(40%) saturate(1670%) hue-rotate(238deg) brightness(89%) contrast(74%);
+  filter: brightness(0) saturate(100%) invert(48%) sepia(22%) saturate(4101%) hue-rotate(348deg) brightness(98%) contrast(93%);
+}
+
+
+.gradient {
+  height: 12em;
+  padding-top: 7em; width: 120%
+   background: rgb(242,105,34);
+background: linear-gradient(180deg, rgba(242,105,34,1) 0%, rgba(117,76,158,1) 100%); 
+}
+
+.gradient-back {
+  height: 12em;
+   width: 120%;
+   background: rgb(242,105,34);
+background: linear-gradient(0deg, rgba(242,105,34,1) 0%, rgba(117,76,158,1) 100%); 
+}
+
+.footer {
+  background-color: rgba(117,76,158,1);
+  color: #d0d0d0;
+  font-size: 0.8em;
+}
+
+.footer p a {
+  text-decoration: underline;
+  color: #d0d0d0;
+}
+
+.footer p {
+  padding: 0.1em;
+}
+
+
+.footer .row [class*="col-"] {
+  float: left;
+  /*border: 1px solid red;*/
+  margin: 0.6em;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+
+.plus {
+  background-color: rgba(117,76,158,1);
 }
