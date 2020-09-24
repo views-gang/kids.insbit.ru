@@ -751,4 +751,8 @@ background: linear-gradient(0deg, rgba(242,105,34,1) 0%, rgba(117,76,158,1) 100%
   margin-left: 45em;  
 }
 
-
+.number {
+  color: #754C9E;
+  font-weight: 700;
+  font-size: 1.7em;
+}
