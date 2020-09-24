@@ -632,7 +632,7 @@ input {
   transition: all 0.2s ease-in-out;
   appearance: none;
   -webkit-appearance: none;
-  height: 4em;
+  height: 2em;
   /*color: #F26922;*/
 }
 
@@ -642,8 +642,8 @@ button, input {
   margin: 1em 0;
   outline: 0;
   padding: 0 1em;
-  font-size: 2.2em;
-  border-radius: 3em;
+  font-size: 2.5em;
+  border-radius: 2em;
   background-color: white;
 }
 
@@ -657,7 +657,7 @@ button {
 }
 
 label {
-  font-size: 2.7em;
+  font-size: 1.8em;
 }
 
 h4 {
@@ -669,7 +669,7 @@ h4 {
 }
 
 .politics {
-  font-size: 2em;
+  font-size: 1.5em;
   padding-bottom: 1.5em;
 }
 .politics a {
@@ -692,14 +692,14 @@ h4 {
 
 
 .gradient {
-  height: 12em;
+  height: 6em;
   padding-top: 7em; width: 100%;
    background: rgb(242,105,34);
 background: linear-gradient(180deg, rgba(242,105,34,1) 0%, rgba(117,76,158,1) 100%); 
 }
 
 .gradient-back {
-  height: 12em;
+  height: 6em;
    width: 100%;
    background: rgb(117,76,158,1);
 background: linear-gradient(0deg, rgba(242,105,34,1) 0%, rgba(117,76,158,1) 100%); 
