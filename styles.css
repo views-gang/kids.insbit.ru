@@ -905,20 +905,91 @@ background: linear-gradient(0deg, rgba(242,105,34,1) 0%, rgba(117,76,158,1) 100%
 
 @-moz-keyframes three {
         0%   { transform: rotate3d(0, 0, 0, 0); }
-        50%  { transform: rotate3d(1, 1, 1, 360deg) translateX(34em) translateY(37em);}
+        50%  { transform: translateX(14em) translateY(37em);}
         100% { transform: rotate3d(0, 0, 0, 0); }
     }
 
 @keyframes three {
         0%   { transform: rotate3d(0, 0, 0, 0); }
-        50%  { transform: rotate3d(1, 1, 1, 360deg) translateX(34em) translateY(37em);}
+        50%  { transform: translateX(14em) translateY(37em);}
         100% { transform: rotate3d(0, 0, 0, 0); }
     }
 
 @-webkit-keyframes three {
         0%   { transform: rotate3d(0, 0, 0, 0); }
-        50%  { transform: rotate3d(1, 1, 1, 360deg) translateX(34em) translateY(37em);}
+        50%  { transform: translateX(14em) translateY(37em);}
         
         100% { transform: rotate3d(0, 0, 0, 0); }
     }
+
+.crc::before{
+  background: url("/img/crc-w.svg");
+  background-size: 14em 14em;
+  height: 14em;
+  width: 14em;
+  margin-top: 3em;
+  margin-left: 30em;
+  position: absolute;
+  content: "";
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+  -webkit-animation: nbounce 7s linear infinite;
+  -moz-animation:nbounce 7s linear infinite;
+  animation:nbounce 7s linear infinite;
+}
+
+@-moz-keyframes nbounce {
+        0%   { transform: rotate3d(0, 0, 0, 0); }
+        50%  { transform: rotate3d(1, 1, 1, 360deg)}
+        100% { transform: rotate3d(0, 0, 0, 0); }
+    }
+
+@keyframes nbounce {        0%   { transform: rotate3d(0, 0, 0, 0); }
+        50%  { transform: rotate3d(1, 1, 1, 360deg)}
+        100% { transform: rotate3d(0, 0, 0, 0); }
+    }
+
+@-webkit-keyframes nbounce {        0%   { transform: rotate3d(0, 0, 0, 0); }
+        50%  { transform: rotate3d(1, 1, 1, 360deg)}
+        100% { transform: rotate3d(0, 0, 0, 0); }
+    }
+
+
+.wow::after{
+  background: url("/img/st-w.svg");
+  background-size: 14em 14em;
+  height: 14em;
+  width: 14em;
+  margin-top: 0em;
+  margin-left: 0em;
+  position: absolute;
+  content: "";
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+  -webkit-animation: nbounce 7s linear infinite;
+  -moz-animation:nbounce 7s linear infinite;
+  animation:nbounce 7s linear infinite;
+}
+
+@-moz-keyframes nbounce {
+        0%   { transform: rotate3d(0, 0, 0, 0); }
+        50%  { transform: rotate3d(1, 1, 1, 360deg)}
+        100% { transform: rotate3d(0, 0, 0, 0); }
+    }
+
+@keyframes nbounce {        0%   { transform: rotate3d(0, 0, 0, 0); }
+        50%  { transform: rotate3d(1, 1, 1, 360deg)}
+        100% { transform: rotate3d(0, 0, 0, 0); }
+    }
+
+@-webkit-keyframes nbounce {        0%   { transform: rotate3d(0, 0, 0, 0); }
+        50%  { transform: rotate3d(1, 1, 1, 360deg)}
+        100% { transform: rotate3d(0, 0, 0, 0); }
+    }
+
+
 
