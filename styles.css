@@ -544,8 +544,16 @@ b {
   padding-top: 0.6em;
   padding-bottom: 0.5em;
   border-radius: 3em;
+  animation:wow 10s linear infinite;
   position: relative;
 }
+
+
+@keyframes wow {
+        30%   { background-color: #754C9E; color: white;}
+        50% { background-color: white; color: #754C9E;}
+        70%   { background-color: #754C9E; color: white;}
+    }
 
 .inner-btn {
   width: 100%;
