@@ -152,6 +152,7 @@
 				    <br><label>Комментарий:</label><br>
 				    <input type="area" name="comment" placeholder="">
 				    <div data-netlify-recaptcha="true" ></div>
+				    <div id="prompt"></div>
 				  <button type="submit">ПОЗВОНИТЕ МНЕ!</button>
 					</form>
 					</div>
@@ -241,6 +242,13 @@
   e.preventDefault();
 
   var $form = $(this);
+  if ($("#contact #g-recaptcha-response").val()=="") {
+  	$('#prompt').html('<p style="padding-bottom: 1.5em;padding-top: 1.5em;">Пожалуйста, введите капчу.</p>');
+  	return;
+  }
+  else {
+  	$('#prompt').html('');
+  }
   $.post($form.attr("action"), $form.serialize()).then(function() {
     $('#approved').html('<h4>Спасибо! </h4><p style="padding-bottom: 1.5em;">Мы свяжемся с вами как можно скорее!</p>');
   });
