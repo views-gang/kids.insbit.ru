@@ -29,8 +29,8 @@
 		<div style="height: 7em;" class="spacer"></div>
 		<div class="container" >
 			<div class="row" >
-				<div class="col-7"><h1 style="padding-bottom: 0.5em;">Школа информатики и&nbsp;математики для&nbsp;детей и&nbsp;подростков</h1><p>Курсы для детей от&nbsp;14 лет в&nbsp;Екатеринбурге.<br><br>Наша задача&nbsp;&mdash; вдохновить и&nbsp;научить учиться.</p><a href="#courses"><div class="btn">НАЧАТЬ УЧИТЬСЯ</div></a></div>
-				<div class="col-5 logo" style="justify-content:space-around; align-items: center; "><center><img src="img/logo.svg" style="width: 70%; align-self: center; padding: 3rem; vertical-align: center;"></center></div>
+				<div class="col-7"><div class="str"></div><h1 style="padding-bottom: 0.5em;">Школа информатики и&nbsp;математики для&nbsp;детей и&nbsp;подростков</h1><p>Курсы для детей от&nbsp;14 лет в&nbsp;Екатеринбурге.<br><br>Наша задача&nbsp;&mdash; вдохновить и&nbsp;научить учиться.</p><a href="#courses"><div class="btn">НАЧАТЬ УЧИТЬСЯ</div></a></div>
+				<div class="col-5 logo" style="justify-content:space-around; align-items: center; "><div class="st"></div><div class="fl"></div><div class="sm"></div><center><img src="img/logo.svg" style="width: 70%; align-self: center; padding: 3rem; vertical-align: center;"></center></div>
 			</div>
 			<div class="row" style="padding-top: 7em; padding-bottom: 2em;">
 				<div class="col-4 wide-4"><img src="img/ezh.svg" style="width: 100%; padding-top: 1rem; align-self: center; vertical-align: center;"></div>
@@ -144,7 +144,9 @@
 					<p>Будет ещё интереснее! Давайте мы вам всё расскажем. Но для этого расскажите совсем немного о себе.</p>
 					<p class="politics">Заполняя форму, вы даёте свое согласие на обработку ваших персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в <a href="https://insbit.ru/pages/show/politika_konfidencialnosti">Политике конфиденциальности</a>.</p>
 					
-					<form name="contact" id="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+					<form name="contact" id="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true" data-netlify-recaptcha="true">
+						 <div style="display: none;">
+    <label>Don’t fill this out if you're human: <input name="bot-field" /></label></div>
 						 <br><label>Как вас зовут? <br></label>
 				    <input style="margin-bottom: 1em" type="text" name="name" id="name" placeholder="Александр"/>
 				  <br><label>Ваш номер телефона:</label><br>
@@ -226,6 +228,7 @@
 			</div>
 
 
+
 		<script>
     $(window).scroll(function() {
         if ($(this).scrollTop() > 100) {
@@ -242,10 +245,7 @@
   e.preventDefault();
 
   var $form = $(this);
-  if ($("#contact #name").val()=="") {
-  	$('#prompt').html('<p style="padding-bottom: 1.5em;padding-top: 1.5em; font-weight:700; color: #f26922">Пожалуйста, введите имя.</p>');
-  	return;
-  }
+
   if ($("#contact #phone").val()=="") {
   	$('#prompt').html('<p style="padding-bottom: 1.5em;padding-top: 1.5em; font-weight:700; color: #f26922">Пожалуйста, введите свой номер телефона.</p>');
   	return;

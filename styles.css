@@ -760,13 +760,119 @@ background: linear-gradient(0deg, rgba(242,105,34,1) 0%, rgba(117,76,158,1) 100%
 
   #upbutton {
     background: url("/img/up.svg") no-repeat top left;
-    background-size: 4.5vw 4.5vw;
-    height: 4.5vw;
-    width: 4.5vw;
-    bottom: 3vw;
-    right: 3vw;
+    background-size: 8vh 8vh;
+    height: 8vh;
+    width: 8vh;
+    bottom: 4vh;
+    right: 4vh;
     cursor: pointer;
     display: none;
     position: fixed;
     z-index: 999;
   }
+
+
+.st::before{
+  background: url("/img/st-f.svg");
+  background-size: 13em 13em;
+  height: 13em;
+  width: 13em;
+  margin-top: 19em;
+  margin-left: -19em;
+  position: absolute;
+  content: "";
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 3;
+  -webkit-animation:spin 4s cubic-bezier(.65,.05,.36,1) infinite;
+  -moz-animation:spin 4s cubic-bezier(.65,.05,.36,1) infinite;
+  animation:spin 4s cubic-bezier(.65,.05,.36,1) infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+.fl::before{
+  background: url("/img/fl-f.svg");
+  background-size: 17em 17em;
+  height: 17em;
+  width: 17em;
+  margin-top: 1em;
+  margin-left: 2em;
+  animation: 3s ease-in 1s 2 reverse both paused slidein;
+  position: absolute;
+  content: "";
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 3;
+  -webkit-animation:bounce 1s linear infinite;
+  -moz-animation:bounce 1s linear infinite;
+  animation:bounce 1s linear infinite;
+}
+
+@-moz-keyframes bounce {
+        0%   { transform: scale(1); }
+        50%  { transform: scale(1.25); }
+        100% { transform: scale(1); }
+    }
+
+@keyframes bounce {
+        0%   { transform: scale(1); }
+        50%  { transform: scale(1.25); }
+        100% { transform: scale(1); }
+    }
+
+@-webkit-keyframes bounce {
+        0%   { transform: scale(1); }
+        50%  { transform: scale(1.25); }
+        100% { transform: scale(1); }
+    }
+
+
+.sm::before{
+  background: url("/img/sm-f-40.svg");
+  background-size: 12em 12em;
+  height: 12em;
+  width: 12em;
+  margin-top: 25em;
+  margin-left: 2em;
+  animation: 3s ease-in 1s 2 reverse both paused slidein;
+  position: absolute;
+  content: "";
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 3;
+  -webkit-animation: hey 4s linear infinite;
+  -moz-animation:hey 4s linear infinite;
+  animation:hey 4s linear infinite;
+}
+
+@-moz-keyframes hey {
+        0%   { transform: translateX(1em); }
+        25%  { transform: translateX(-1em); }
+        50%  { transform: translateX(1em); }
+        75%  { transform: translateX(5em); }
+        100% { transform: translateX(1em); }
+    }
+
+@keyframes hey {
+        0%   { transform: translateX(2em); }
+        25%  { transform: translateX(-1em); }
+        50%  { transform: translateX(2em); }
+        75%  { transform: translateX(5em); }
+        100% { transform: translateX(2em); }
+    }
+
+@-webkit-keyframes hey {
+        0%   { transform: translateX(2em); }
+        25%  { transform: translateX(-1em); }
+        50%  { transform: translateX(2em); }
+        75%  { transform: translateX(5em); }
+        100% { transform: translateX(2em); }
+    }
+
