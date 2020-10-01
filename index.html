@@ -146,12 +146,12 @@
 					
 					<form name="contact" id="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
 						 <br><label>Как вас зовут? <br></label>
-				    <input style="margin-bottom: 1em" type="text" name="name" placeholder="Александр"/>
+				    <input style="margin-bottom: 1em" type="text" name="name" id="name" placeholder="Александр"/>
 				  <br><label>Ваш номер телефона:</label><br>
-				    <input style="margin-bottom: 1em" type="tel" name="phone_number" placeholder="+7 (999) 565-55-75">
+				    <input style="margin-bottom: 1em" type="tel" name="phone_number" id="phone" placeholder="+7 (999) 565-55-75">
 				    <br><label>Комментарий:</label><br>
 				    <input type="area" name="comment" placeholder="">
-				    <div data-netlify-recaptcha="true" ></div>
+				    <div style="align-self: center; padding-bottom: 1.5em" data-netlify-recaptcha="true" ></div>
 				    <div id="prompt"></div>
 				  <button type="submit">ПОЗВОНИТЕ МНЕ!</button>
 					</form>
@@ -242,13 +242,20 @@
   e.preventDefault();
 
   var $form = $(this);
-  if ($("#contact #g-recaptcha-response").val()=="") {
-  	$('#prompt').html('<p style="padding-bottom: 1.5em;padding-top: 1.5em;">Пожалуйста, введите капчу.</p>');
+  if ($("#contact #name").val()=="") {
+  	$('#prompt').html('<p style="padding-bottom: 1.5em;padding-top: 1.5em; font-weight:700; color: #f26922">Пожалуйста, введите имя.</p>');
   	return;
   }
-  else {
-  	$('#prompt').html('');
+  if ($("#contact #phone").val()=="") {
+  	$('#prompt').html('<p style="padding-bottom: 1.5em;padding-top: 1.5em; font-weight:700; color: #f26922">Пожалуйста, введите свой номер телефона.</p>');
+  	return;
   }
+  if ($("#contact #g-recaptcha-response").val()=="") {
+  	$('#prompt').html('<p style="padding-bottom: 1.5em;padding-top: 1.5em; font-weight:700; color: #f26922">Пожалуйста, подтвердите, что вы не робот.</p>');
+  	return;
+  }
+
+  
   $.post($form.attr("action"), $form.serialize()).then(function() {
     $('#approved').html('<h4>Спасибо! </h4><p style="padding-bottom: 1.5em;">Мы свяжемся с вами как можно скорее!</p>');
   });
