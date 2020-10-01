@@ -757,3 +757,16 @@ background: linear-gradient(0deg, rgba(242,105,34,1) 0%, rgba(117,76,158,1) 100%
   font-weight: 700;
   font-size: 1.7em;
 }
+
+  #upbutton {
+    background: url("/img/up.svg") no-repeat top left;
+    background-size: 4.5vw 4.5vw;
+    height: 4.5vw;
+    width: 4.5vw;
+    bottom: 3vw;
+    right: 3vw;
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    z-index: 999;
+  }

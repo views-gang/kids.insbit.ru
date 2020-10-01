@@ -17,10 +17,15 @@
 		<!--!!!<meta property="og:image" content="https://stenograffia.ru/img/photo/11.jpg" />-->
 		<link rel="stylesheet" href="./styles.css?ver=workwork">
 		<script src="likely.js"></script>
+		<script src="https://code.jquery.com/jquery-git.min.js"></script>
 		<link rel="stylesheet" href="likely.css">
 		
 	</head>
 	<body>
+
+<div id="upbutton"></div>
+
+
 		<div style="height: 7em;" class="spacer"></div>
 		<div class="container" >
 			<div class="row" >
@@ -94,7 +99,7 @@
 			</div>
 			<div class="row" style="padding-top: 7em;color: white;">
 				<div class="col-3" style="justify-content: start;"><img src="img/zadachi.svg"  class="icon"><p style="text-align: center;">Нестандартным подходам к&nbsp;решению задач</p></div>
-				<div class="col-3" style="justify-content: start;"><p style="text-align: center;">Сможет уверенно общаться с&nbsp;компьютером</p><img src="img/time.svg"  class="icon"></div>
+				<div class="col-3" style="justify-content: start;"><p style="text-align: center;">Сможет уверенно общаться с&nbsp;компьютером</p><img src="img/tasks.svg"  class="icon"></div>
 				<div class="col-3" style="justify-content: start;"><img src="img/glass.svg"  class="icon"><p style="text-align: center;">Разовьет логическое и&nbsp;абстрактное мышление</p></div>
 				<div class="col-3" style="justify-content: start;"><p style="text-align: center;">Освоит азы программирования</p><img src="img/friend.svg" class="icon"></div>
 				
@@ -134,10 +139,12 @@
 			<div class="row" style="padding-top: 14em;"><a id="form"></a>
 				<div class="col-1"></div>
 				<div class="col-8 form"><div class="form-inner">
+					<div id="approved">
 					<h4>Стало интересно?</h4>
 					<p>Будет ещё интереснее! Давайте мы вам всё расскажем. Но для этого расскажите совсем немного о себе.</p>
 					<p class="politics">Заполняя форму, вы даёте свое согласие на обработку ваших персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в <a href="https://insbit.ru/pages/show/politika_konfidencialnosti">Политике конфиденциальности</a>.</p>
-					<form>
+					
+					<form name="contact" id="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
 						 <br><label>Как вас зовут? <br></label>
 				    <input style="margin-bottom: 1em" type="text" name="name" placeholder="Александр"/>
 				  <br><label>Ваш номер телефона:</label><br>
@@ -147,6 +154,7 @@
 
 				  <button type="submit">ПОЗВОНИТЕ МНЕ!</button>
 					</form>
+					</div>
 				</div></div>
 
 			</div>
@@ -217,7 +225,28 @@
 			</div>
 
 
-		
+		<script>
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) {
+            if ($('#upbutton').is(':hidden')) {
+                $('#upbutton').css({opacity : 1}).fadeIn('slow');
+            }
+        } else { $('#upbutton').stop(true, false).fadeOut('fast'); }
+    });
+    $('#upbutton').click(function() {
+        $('html, body').stop().animate({scrollTop : 0}, 300);
+    });
+
+    $("#contact").submit(function(e) {
+  e.preventDefault();
+
+  var $form = $(this);
+  $.post($form.attr("action"), $form.serialize()).then(function() {
+    $('#approved').html('<h4>Спасибо! </h4><p style="padding-bottom: 1.5em;">Мы свяжемся с вами как можно скорее!</p>');
+  });
+});
+
+</script>
 		
 </body>
 </html>
